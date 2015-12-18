@@ -4,17 +4,13 @@
 # all files are redirected to ~/Pictures/test instead of ~/Pictures until done
 #		     ^^ Don't forget to fix that ^^
 #
-<<<<<<< HEAD
-#	v0.1.0 created 2015-12-18
-=======
-#	v0.1.1 created 2015-12-18
->>>>>>> test
+# 	0.1.2 created 2015-12-18
 #	D. Scott Boggs
 
 
 currentDate=$(date +"%Y-%m-%d")		#save current date for filename
 dirName=$"Canon-Backup-$currentDate"
-dirLongName=$"$PWD/$dirName"
+dirLongName=$"/home/scott/Pictures/$dirName"
 echo -e "\e[1m\e[31mCreating folder $dirName...\e[21m\e[39m"
 sudo mkdir $dirLongName   #create folder for today's dump
 
