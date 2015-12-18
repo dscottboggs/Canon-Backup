@@ -4,7 +4,7 @@
 # all files are redirected to ~/Pictures/test instead of ~/Pictures until done
 #		     ^^ Don't forget to fix that ^^
 #
-#	v0.0.3 created 2015-12-18
+#	v0.1.0 created 2015-12-18
 #	D. Scott Boggs
 
 
