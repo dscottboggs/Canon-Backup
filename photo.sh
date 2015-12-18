@@ -9,7 +9,7 @@
 
 
 currentDate=$(date +"%Y-%m-%d")		#save current date for filename
-dirName=$"Canon-Backup-$currentDate"
+dirName=$"Canon_Backup_$currentDate"
 dirLongName=$"/home/scott/Pictures/$dirName"
 echo -e "\e[1m\e[31mCreating folder $dirName...\e[21m\e[39m"
 sudo mkdir $dirLongName   #create folder for today's dump
