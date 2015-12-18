@@ -4,16 +4,22 @@
 # all files are redirected to ~/Pictures/test instead of ~/Pictures until done
 #		     ^^ Don't forget to fix that ^^
 #
-#	v0.0.1 created 2015-12-17
+#	v0.0.2 created 2015-12-18
 #	D. Scott Boggs
 
 
 currentDate=$(date +"%Y-%m-%d")		#save current date for filename
-dirName=$"/home/scott/Pictures/test/Canon-Backup-$currentDate"
-sudo mkdir $dirName   #create folder for today's dump
+dirName=$"Canon-Backup-$currentDate/"
+dirLongName=$"$PWD/$dirName"
+echo "Creating folder $dirName..."
+sudo mkdir $dirLongName   #create folder for today's dump
 
+echo "Dectecting Camera..."
 gphoto2 --auto-detect		#Don't forget to find the camera!
-gphoto2 --get-all-files --folder="$dirName"	#get all files and save to new dir
+echo "Retrieving files from camera and saving them to $dirLongName..."
+cd $dirLongName
+sudo gphoto2 --get-all-files		#get all files and save to new dir
 
-mkdir "$dirName/TIFF8/"		#create a subdirectory for GIMP compatible TIFFs
-
+echo "creating folder $dirName/TIFF8 for GIMP-compatible, uncompressed TIFFs..."
+sudo mkdir $dirLongName/TIFF8/		#create a subdirectory for GIMP compatible TIFFs
+echo "converting files..."
